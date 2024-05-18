@@ -1,29 +1,41 @@
 import { Link } from "react-router-dom"
 
-export const Home = () => {
+export const HomePage = () => {
     return (
-        <div className="bg-green-500 h-screen flex items-center justify-center font-sans font-bold md:max-w-screen-md m-auto p-5">
+        <div className="bg-slate-900 min-h-screen flex flex-col justify-center items-center font-['Poppins'] p-6 md:p-16">
+            <div className="flex flex-col justify-around h-full gap-5 w-full max-w-lg">
+                <div className="px-10">
+                    <img
+                        src="https://img1.picmix.com/output/stamp/normal/1/6/5/0/1930561_979af.gif"
+                        alt="LOGO CIRCUIT QUEST"
+                        className="block m-auto w-full max-w-xs"
+                    />
+                    <h1 className="text-white font-bold text-center my-5 text-2xl">
+                        Circuit<span className="text-violet-600">Quest</span>
+                    </h1>
+                </div>
 
-            <div className='flex flex-col animate-[showDown_1s_ease-in-out] shadow-md p-10 rounded-md bg-white'>
-                <h2 className="text-2xl text-black text-center my-5">Seja bem vindo</h2>
-                <img src="https://img1.picmix.com/output/stamp/normal/1/6/5/0/1930561_979af.gif" alt="LOGO QUESTIONS" className='max-w-64 m-auto my-5' />
+                <div>
+                    <h2 className="text-center text-white font-bold text-xl md:text-2xl">Vamos jogar!</h2>
+                    <p className="text-center text-slate-100 font-normal my-2">Para iniciar as perguntas, aperte para jogar</p>
+                </div>
 
-                <h1 className="text-4xl text-black text-center my-5 animate-bounce">
-                    Circuit<span className='text-green-500'>Quest</span>
-                </h1>
+                <div className="flex flex-col gap-5">
+                    <Link to='/question'>
+                        <button className="bg-violet-600 p-4 rounded-md text-white w-full hover:bg-violet-700 transition duration-300">
+                            Jogar
+                        </button>
+                    </Link>
 
-                <span className='mb-5 text-black text-center'>
-                    Organização e Arquiteturas de computadores
-                </span>
+                    <Link to='/consequence'>
+                        <button className="bg-red-600 p-4 rounded-md text-white w-full hover:bg-red-700 transition duration-300">
+                            Consequência
+                        </button>
+                    </Link>
 
-                <Link className="w-full" to='/question'>
-                    <button className='w-full bg-green-700 text-white rounded-md h-16 hover:brightness-50 transition-all duration-300 ease-in-out hover:scale-105 shadow-md'>
-                        Jogar
-                    </button>
-                </Link>
-
+                </div>
             </div>
-
         </div>
+
     )
 }

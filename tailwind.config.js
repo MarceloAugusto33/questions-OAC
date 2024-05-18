@@ -12,10 +12,13 @@ export default {
           '100%': {transform: 'translateY(0)', opacity: '1'}
         },
         Animation: {
-          showDown: 'showDown ease-in-out .4s'
+          showDown: 'showDown ease-in-out .4s',
         }
       }
     },
+    fontFamily: {
+      'body': ['Poppins', 'sans serif']
+    }
   },
   plugins: [],
 }
